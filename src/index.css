@@ -1,8 +1,14 @@
 body {
-  background: #f6e7ce;
+  /* background: #f6e7ce; */
   font-family: sans-serif;
   padding: 20px;
   display: block;
+  background: url('https://i.imgur.com/vtSmBdZ.jpg'); /* textura de couro velho ou papel artesanal */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Georgia', serif;
+  color: #2d1b0c;
 
 }
 

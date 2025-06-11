@@ -62,7 +62,7 @@ async function enviarPedido() {
 
   pedido += `\n💰 Total: R$ ${total.toFixed(2)}`;
 
-  await fetch("https://discord.com/api/webhooks/1382189563807662214/9rlsoxh2jxKvVCUo0j4tAwDN8zeJaHhFoPk9JduHcFZO46rh7B0jAuayqgvvVo24Q4Wa", {
+  await fetch("https://discord.com/api/webhooks/1382474518588559480/xcL7WVC8ph-pk7pc4mTc0esZ683cGqLRxefa4gWgMoOGCStj5Grg0hQlZ9mBFm7hIrYu", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

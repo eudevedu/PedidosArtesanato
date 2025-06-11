@@ -2,34 +2,28 @@ body {
   background: #f6e7ce;
   font-family: sans-serif;
   padding: 20px;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100vh;
+  display: block;
+  
 }
 
 h1 {
   text-align: center;
   color: #552b00;
-  font-size: 2rem;
 }
 
 input[type="text"],
 input[type="number"] {
   width: 100%;
-  max-width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #aa6a2d;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   background: #fff3e5;
-  overflow-x: auto;
-  display: block;
 }
 
 th,
@@ -37,8 +31,6 @@ td {
   padding: 8px;
   text-align: center;
   border-bottom: 1px solid #ccc;
-  font-size: 0.9rem;
-  word-wrap: break-word;
 }
 
 th {
@@ -50,7 +42,6 @@ th {
   text-align: right;
   font-weight: bold;
   margin-top: 10px;
-  font-size: 1rem;
 }
 
 button {
@@ -63,48 +54,4 @@ button {
   cursor: pointer;
   display: block;
   margin: 20px auto;
-  font-size: 1rem;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  th,
-  td {
-    font-size: 0.8rem;
-    padding: 6px;
-  }
-
-  .total {
-    font-size: 0.9rem;
-  }
-
-  button {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  input[type="text"],
-  input[type="number"] {
-    padding: 6px;
-  }
-
-  table {
-    font-size: 0.8rem;
-  }
-
-  th,
-  td {
-    padding: 4px;
-  }
-
-  .total {
-    text-align: left;
-    font-size: 0.85rem;
-  }
 }

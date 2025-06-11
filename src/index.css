@@ -3,7 +3,7 @@ body {
   font-family: sans-serif;
   padding: 20px;
   display: block;
-  
+
 }
 
 h1 {
@@ -54,4 +54,25 @@ button {
   cursor: pointer;
   display: block;
   margin: 20px auto;
+}
+
+@media (max-width: 480px) {
+  input[type="text"],
+  input[type="number"] {
+    padding: 6px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 4px;
+  }
+
+  .total {
+    text-align: left;
+    font-size: 0.85rem;
+  }
 }

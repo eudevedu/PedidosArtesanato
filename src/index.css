@@ -4,6 +4,7 @@ body {
   padding: 20px;
   margin: 0;
   box-sizing: border-box;
+  width: 100vh;
 }
 
 h1 {

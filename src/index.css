@@ -1,9 +1,9 @@
 body {
-  /* background: #f6e7ce; */
+  background-color:  #6c470675 !important; 
   font-family: sans-serif;
   padding: 20px;
   display: block;
-  background: url('https://i.imgur.com/vtSmBdZ.jpg'); /* textura de couro velho ou papel artesanal */
+  background: url(./img/Volturi_crest_2.webp); /* textura de couro velho ou papel artesanal */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

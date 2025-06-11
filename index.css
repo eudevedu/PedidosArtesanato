@@ -1,0 +1,55 @@
+body {
+  background: #f6e7ce;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #552b00;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #aa6a2d;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff3e5;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background: #5d2b00;
+  color: white;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button {
+  background: #804000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}

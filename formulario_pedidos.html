@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artesanato DomJonhy</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <h1>Artesanato Volturi</h1>
+  <label>Nome:</label>
+  <input type="text" id="nome">
+  <label>Pombo:</label>
+  <input type="text" id="pombo">
+
+  <h3>Produtos Disponíveis</h3>
+  <table id="tabelaProdutos">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <p class="total" id="totalPedido">Total do Pedido: R$ 0,00</p>
+  <button onclick="enviarPedido()">Enviar Pedido</button>
+
+  <script src="./produtos.js">
+    
+  </script>
+</body>
+</html>

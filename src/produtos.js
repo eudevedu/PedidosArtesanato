@@ -14,6 +14,7 @@ const produtos = [
   { nome: "Bonecas", preco: 8.45 },
   { nome: "Orelhas", preco: 8.45 },
   { nome: "Caixa Rustica", preco: 0.5 },
+  { nome: "Seda", preco: 0.55 },
 ];
 
 const tabela = document.querySelector("#tabelaProdutos tbody");

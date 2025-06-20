@@ -39,9 +39,7 @@ function atualizarTotal() {
     )}`;
     total += subtotal;
   });
-  document.getElementById(
-    "totalPedido"
-  ).innerText = `Total do Pedido: R$ ${total.toFixed(2)}`;
+  document.getElementById("totalPedido").innerText = `Total do Pedido: R$ ${total.toFixed(2)}`;
 }
 
 async function enviarPedido() {

@@ -30,21 +30,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   });
 
-  document.querySelectorAll("input[type='number']").forEach((input) => {
+  document.querySelectorAll("input[data-index]").forEach((input) => {
     input.addEventListener("input", atualizarTotal);
   });
 
   function atualizarTotal() {
     let total = 0;
-    document.querySelectorAll("input[type='number']").forEach((input) => {
-      const i = input.dataset.index;
+    document.querySelectorAll("input[data-index]").forEach((input) => {
+      const i = Number(input.dataset.index);
       const qtd = Number(input.value);
+      if (!Number.isInteger(i) || !produtos[i]) return;
+
       const subtotal = produtos[i].preco * qtd;
       document.getElementById(`total-${i}`).innerText = `R$ ${subtotal.toFixed(
         2
       )}`;
       total += subtotal;
     });
+
     document.getElementById(
       "totalPedido"
     ).innerText = `Total do Pedido: R$ ${total.toFixed(2)}`;
@@ -62,15 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let pedido = `**Novo Pedido**\n👤 Nome: ${nome}\n🐦 Pombo: ${pombo}\n\n📦 **Itens:**\n`;
     let total = 0;
 
-    document.querySelectorAll("input[type='number']").forEach((input) => {
-      const i = input.dataset.index;
+    document.querySelectorAll("input[data-index]").forEach((input) => {
+      const i = Number(input.dataset.index);
       const qtd = Number(input.value);
-      if (qtd > 0) {
-        const produto = produtos[i];
-        const subtotal = qtd * produto.preco;
-        pedido += `- ${produto.nome} x ${qtd} = R$ ${subtotal.toFixed(2)}\n`;
-        total += subtotal;
-      }
+      if (!Number.isInteger(i) || !produtos[i] || qtd <= 0) return;
+
+      const produto = produtos[i];
+      const subtotal = qtd * produto.preco;
+      pedido += `- ${produto.nome} x ${qtd} = R$ ${subtotal.toFixed(2)}\n`;
+      total += subtotal;
     });
 
     if (total === 0) {
@@ -82,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       await fetch(
-        "https://discord.com/api/webhooks/1385725607245250642/kyubfcOEk7bY2lT9_0sTbUHLFJ2bOU1iigPCnH4iRvwcDeV7SBGgv74BJrYwXuwSm5qk",
+        "https://discord.com/api/webhooks/1385725607245250642/kyubfcOEk7bY2lT9_0sTbUHLFJ2bOU1iigPCnH4iRvwcDeV7SBGgv74BJrYwXuwSm5qk", // Insira aqui o webhook do Discord, se quiser testar
         {
           method: "POST",
           headers: {
@@ -97,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Resetar campos
       document.getElementById("nome").value = "";
       document.getElementById("pombo").value = "";
-      document.querySelectorAll("input[type='number']").forEach((input) => {
+      document.querySelectorAll("input[data-index]").forEach((input) => {
         input.value = 0;
       });
       atualizarTotal();

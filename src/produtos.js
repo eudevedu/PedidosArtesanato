@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       await fetch(
-        "https://discord.com/api/webhooks/1385458171350487090/2ghJpoM1iyoB5gpKPZGoaRJqSfb9eDyV8rLrPZ6AWvhlsKrg6ZQWwd1tg8Bh2tNP0sEo",
+        "https://discord.com/api/webhooks/1385725607245250642/kyubfcOEk7bY2lT9_0sTbUHLFJ2bOU1iigPCnH4iRvwcDeV7SBGgv74BJrYwXuwSm5qk",
         {
           method: "POST",
           headers: {
